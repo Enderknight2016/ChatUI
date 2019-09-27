@@ -13,16 +13,30 @@ import java.util.List;
 import static com.example.chatui.ChatAppMsgDTO.MSG_TYPE_RECEIVED;
 import static com.example.chatui.ChatAppMsgDTO.MSG_TYPE_SENT;
 
-public class ChatAppMsgAdapter extends RecyclerView.Adapter<ChatAppMsgViewHolder> {
+/**
+ *
+ */
+public class ChatAppMsgAdapter extends RecyclerView.Adapter<ChatAppMsgViewHolder>
+{
 
     private List<ChatAppMsgDTO> msgDtoList = null;
 
+    /**
+     *
+     * @param msgDtoList
+     */
     public ChatAppMsgAdapter(List<ChatAppMsgDTO> msgDtoList) {
         this.msgDtoList = msgDtoList;
     }
 
+    /**
+     *
+     * @param holder
+     * @param position
+     */
     @Override
-    public void onBindViewHolder(ChatAppMsgViewHolder holder, int position) {
+    public void onBindViewHolder(ChatAppMsgViewHolder holder, int position)
+    {
         ChatAppMsgDTO msgDto = this.msgDtoList.get(position);
         // If the message is a received message.
         if(MSG_TYPE_RECEIVED.equals(msgDto.getMsgType()))
@@ -42,15 +56,27 @@ public class ChatAppMsgAdapter extends RecyclerView.Adapter<ChatAppMsgViewHolder
         }
     }
 
+    /**
+     *
+     * @param parent
+     * @param viewType
+     * @return
+     */
     @Override
-    public ChatAppMsgViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ChatAppMsgViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
+    {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.message, parent, false);
         return new ChatAppMsgViewHolder(view);
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
-    public int getItemCount() {
+    public int getItemCount()
+    {
         if(msgDtoList==null)
         {
             msgDtoList = new ArrayList<ChatAppMsgDTO>();

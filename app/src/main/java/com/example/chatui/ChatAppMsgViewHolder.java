@@ -6,7 +6,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-public class ChatAppMsgViewHolder extends RecyclerView.ViewHolder {
+public class ChatAppMsgViewHolder extends RecyclerView.ViewHolder
+{
 
     LinearLayout leftMsgLayout;
 
@@ -16,10 +17,16 @@ public class ChatAppMsgViewHolder extends RecyclerView.ViewHolder {
 
     TextView rightMsgTextView;
 
-    public ChatAppMsgViewHolder(View itemView) {
+    /**
+     *
+     * @param itemView
+     */
+    public ChatAppMsgViewHolder(View itemView)
+    {
         super(itemView);
 
-        if(itemView!=null) {
+        if(itemView!=null)
+        {
             leftMsgLayout = (LinearLayout) itemView.findViewById(R.id.chat_left_msg_layout);
             rightMsgLayout = (LinearLayout) itemView.findViewById(R.id.chat_right_msg_layout);
             leftMsgTextView = (TextView) itemView.findViewById(R.id.chat_left_msg_text_view);

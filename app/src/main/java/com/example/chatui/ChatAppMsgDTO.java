@@ -12,24 +12,50 @@ public class ChatAppMsgDTO {
     // Message type.
     private String msgType;
 
-    public ChatAppMsgDTO(String msgType, String msgContent) {
+    /**
+     *
+     * @param msgType
+     * @param msgContent
+     */
+    public ChatAppMsgDTO(String msgType, String msgContent)
+    {
         this.msgType = msgType;
         this.msgContent = msgContent;
     }
 
-    public String getMsgContent() {
+    /**
+     *
+     * @return
+     */
+    public String getMsgContent()
+    {
         return msgContent;
     }
 
-    public void setMsgContent(String msgContent) {
+    /**
+     *
+     * @param msgContent
+     */
+    public void setMsgContent(String msgContent)
+    {
         this.msgContent = msgContent;
     }
 
-    public String getMsgType() {
+    /**
+     *
+     * @return
+     */
+    public String getMsgType()
+    {
         return msgType;
     }
 
-    public void setMsgType(String msgType) {
+    /**
+     *
+     * @param msgType
+     */
+    public void setMsgType(String msgType)
+    {
         this.msgType = msgType;
     }
 }
