@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Create the initial data list.
         final List<ChatAppMsgDTO> msgDtoList = new ArrayList<>();
-        ChatAppMsgDTO msgDto = new ChatAppMsgDTO(ChatAppMsgDTO.MSG_TYPE_RECEIVED, "hello");
-        msgDtoList.add(msgDto);
+        //ChatAppMsgDTO msgDto = new ChatAppMsgDTO(ChatAppMsgDTO.MSG_TYPE_RECEIVED, "hello");
+        //msgDtoList.add(msgDto);
 
         // Create the data adapter with above data list.
         final ChatAppMsgAdapter chatAppMsgAdapter = new ChatAppMsgAdapter(msgDtoList);
